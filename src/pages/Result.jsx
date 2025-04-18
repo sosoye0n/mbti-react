@@ -3,6 +3,7 @@ import { useNavigate, useSearchParams } from "react-router-dom";
 import styled from "styled-components";
 import { Button } from "react-bootstrap";
 import { resultdata } from "../assets/resultdata";
+import KakaoShareButton from "../components/KakaoShareButton";
 
 //스타일
 const Wrapper = styled.div`
@@ -61,6 +62,13 @@ const Desc = styled.div`
   line-height: 2rem;
   text-align: center;
 `;
+const ButtonGroup = styled.div`
+  display: flex;
+  gap: 10px;
+  & > button[type="button"] {
+    font-size: 1.4rem;
+  }
+`;
 
 //출력
 const Result = () => {
@@ -95,7 +103,10 @@ const Result = () => {
           <br />
           {resultData.best}형 {resultData.name} 고양이 입니다.
         </Desc>
-        <Button onClick={handleClickButton}>테스트 다시 시작하기</Button>
+        <buttonGroup>
+          <Button onClick={handleClickButton}>테스트 다시 시작하기</Button>
+          <KakaoShareButton />
+        </buttonGroup>
       </Contents>
     </Wrapper>
   );
