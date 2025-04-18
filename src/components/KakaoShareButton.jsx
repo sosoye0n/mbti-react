@@ -8,7 +8,7 @@ const { Kakao } = window; //카카오 찾아오기 : 카카오 문법
 const KakaoShareButton = () => {
   const url = "https://mbtireact.netlify.app/"; //netlify 배포주소
   const resultURL = window.location.href; //공유를 한 사람의 마지막페이지 = 리퍼러 ??
-  console.log("test : ", url, resultURL);
+  // console.log("test : ", url, resultURL);
 
   useEffect(() => {
     Kakao.cleanup(); //에러가 발생되지 않게끔(캐시값이나 ...) 리셋
