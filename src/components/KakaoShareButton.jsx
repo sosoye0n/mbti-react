@@ -23,7 +23,7 @@ const KakaoShareButton = ({ data }) => {
       content: {
         title: "예비집사 판별기 결과",
         description: `예비집사님이 고양이를 키운다면 잘 맞는 고양이는 ${data.name}입니다`,
-        imageUrl: `${url}${data.image}`,
+        imageUrl: `${url}${data.image}`,//이미지오류
         link: {
           webUrl: resultURL, //결과값
         },
