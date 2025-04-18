@@ -26,6 +26,11 @@ const Title = styled.div`
   padding: 10px 20px;
   border-radius: 30px;
   margin-bottom: 20px;
+  //반응형
+  @media screen and (max-width: 780px) {
+    font-size: 2rem;
+    padding: 6px 12px;
+  }
 `;
 const ButtonGroup = styled.div`
   display: flex;
@@ -42,6 +47,16 @@ const ButtonGroup = styled.div`
     border: none;
     &:hover {
       background: var(--accent);
+    }
+  }
+  //반응형
+  @media screen and (max-width: 780px) {
+    flex-direction: column;
+    padding: 10px;
+    & > button[type="button"] {
+      width: 100%;
+      height: 100%;
+      font-size: 2.4rem;
     }
   }
 `;
